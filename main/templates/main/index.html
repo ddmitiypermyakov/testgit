@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Список техники</p>
+<div>
+    {%for item in electronic %}
+
+    Наименование: {{ item.title }} </br>
+    Техническое описание: {{ item.content }}</br>
+    Дата публикации :{{ item.data_published | date:'d-m-Y H-i-s' }}</br>
+
+    {% autoescape on %}
+<p class="{% cycle 'odd' 'even' as rowcolors %}"> {{item.title}}</p>
+
+
+    {{ number }}
+    {{ number1 }}
+    {% endautoescape %}
+    <hr>
+
+    {% endfor%}
+</div>
+{% debug %}
+</body>
+</html>

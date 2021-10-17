@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h1>Hello</h1>
+
+
+
+
+
+
+
+{% for item in product|dictsort:'category.name' %}
+{% ifchanged %}
+
+
+{{ item.category.name }}
+{% endifchanged %}
+{% endfor %}
+<h2>2 попытка </h2>
+
+{% for item in category %}
+
+
+
+
+
+
+
+
+</body>
+</html>
